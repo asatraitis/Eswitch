@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {status: ''};
   }
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get('/status').then((res) => {
       this.setState({status: res.data.status});
       console.log(this.state.status);
